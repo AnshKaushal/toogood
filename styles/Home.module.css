@@ -1,0 +1,112 @@
+.container {
+  padding: 0 2rem;
+  background-color: #000;
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+
+.main {
+  min-height: 77vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 3rem;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  padding: 2rem 0;
+  margin-top: 15px;
+  text-align: center;
+  border-top: 1px solid #bffff0;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: red;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: block;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.grid h2:hover {
+  color : red;
+}
+
+.myImg {
+  border-radius: 10px;
+  margin-top: 10px !important;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .container, .description, .grid {
+    font-size: 0.75rem;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+}
+
+.mainnav ul{
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.mainnav ul li {
+  margin: 0 24px;
+  list-style: none;
+  font-weight: bold;
+}
+
+.mainnav ul li:hover {
+  color: red;
+}
