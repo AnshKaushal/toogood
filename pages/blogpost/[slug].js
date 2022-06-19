@@ -21,9 +21,9 @@ const Slug = (props) => {
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1>{blog && blog.title}</h1>
+          <h1 className={styles.heading}>{blog && blog.title}</h1>
           <hr />
-          {blog && <div dangerouslySetInnerHTML = {createMarkup(blog.content)}></div>}
+          {blog && <div className={styles.blogPara} dangerouslySetInnerHTML = {createMarkup(blog.content)}></div>}
         </main>
       </div>
       <footer className={styles.footer}>

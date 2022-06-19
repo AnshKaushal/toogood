@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          &lt;Blog By <a href="https://github.com/AnshKaushal">Ansh/&gt;</a>&#8482;
+          &lt;Blog By <a href="https://github.com/AnshKaushal">Ansh</a>/&gt;&#8482;
         </h1>
         <p>Your Fav Dev Blog</p>
         <p>Made entirely with Nextjs & Basic web technologies</p>
@@ -25,20 +25,21 @@ export default function Home() {
         </p> 
 
         <div className={styles.grid}>
-          <Link href="/blogpost/why-i-started-blogging" className={styles.postLink}>
-            <h2>Why I Started Blogging &rarr;</h2>
+          
+          <Link href="/blogpost/why-i-started-blogging">
+            <h2>🔱 Why I Started Blogging &rarr;</h2>
           </Link>
 
-          <Link href="/blogpost/first-post" className={styles.postLink}>
-            <h2>First Post &rarr;</h2>
+          <Link href="/blogpost/first-post">
+            <h2>🔱 First Post &rarr;</h2>
           </Link>
 
-          <Link href="/blogpost/basics-of-programming" className={styles.postLink}>
-            <h2>Basics Of Programming &rarr;</h2>
+          <Link href="/blogpost/basics-of-programming">
+            <h2>🔱 Basics Of Programming &rarr;</h2>
           </Link>
 
-          <Link href="/blogpost/what-i-learned-and-understood" className={styles.postLink}>
-            <h2>What I Learned And Understood &rarr;</h2>
+          <Link href="/blogpost/what-i-learned-and-understood">
+            <h2>🔱 What I Learned And Understood &rarr;</h2>
           </Link>
         </div>
       </main>

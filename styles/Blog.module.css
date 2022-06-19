@@ -9,7 +9,7 @@
 }
 
 .title {
-    color: red;
+    color: #bffff0;
     font-size: 4rem;
 }
 
@@ -20,6 +20,13 @@
     font-size: 2rem;
 }
 
+.grid {
+    min-width: 50vw;
+    border: 2px solid white;
+    padding: 4rem 3rem;
+    margin-bottom: 1rem;
+}
+    
 .blogItemh3:hover {
     color : red;
 }
@@ -49,15 +56,19 @@
 
   @media (max-width: 768px) {
     .main {
-        align-items:flex-start;
+        margin-left: -20px;
+        align-items: center;
+    }
+    .grid {
+        max-width: 55vw;
+        margin: auto;
+        margin-bottom: 1rem;
     }
     .blogItemh3 {
         font-size: 1.5rem;
-        text-align: left;
     }
     .blogItemPara {
         font-size: 0.75rem;
-        text-align: left;
     } 
     .title {
         text-align: left;
@@ -67,4 +78,20 @@
         font-size: 0.75rem;
         margin-top: 15px;
     }
+}
+
+.postImg {
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.imgPara {
+    margin-top: 4px;
+    margin-left: 70px;
+}
+
+.imgPara a:hover {
+    color: red;
 }

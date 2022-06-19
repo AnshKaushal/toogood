@@ -34,17 +34,19 @@
 }
 
 .title a {
-  color: red;
+  color: #bffff0;
   text-decoration: none;
 }
 
 .title a:hover,
 .title a:focus,
 .title a:active {
-  text-decoration: underline;
+  color: red;
 }
 
 .title {
+  overflow: hidden;
+  cursor: default;
   margin: 0;
   margin-bottom: 5px;
   line-height: 1.15;
@@ -70,6 +72,11 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+}
+
+.grid h2 {
+  border: 2px solid white;
+  padding: 4rem 2rem;
 }
 
 .grid h2:hover {
@@ -99,6 +106,7 @@
   cursor: pointer;
   justify-content: center;
   margin-top: 50px;
+  margin-left: -17px;
 }
 
 .mainnav ul li {
