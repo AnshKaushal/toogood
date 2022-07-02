@@ -4,7 +4,7 @@ import Head from 'next/head'
 import styles from '../styles/Contact.module.css'
 
 const Compose = () => {
-    const url = `/api/postcompose`
+    const url = `http://localhost:3000/api/postcompose`
     const [data,setData] = useState({
         title: "",
         metadesc: "",
