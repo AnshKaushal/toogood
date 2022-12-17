@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
@@ -18,7 +19,7 @@ export default function Home() {
         <p>Your Fav Dev Blog</p>
         <p>Made entirely with Nextjs & Basic web technologies</p>
 
-        <img className={styles.myImg} src="/homeimg.avif" width={237} height={158} alt="coder"/>
+        <Image className={styles.myImg} src="/homeimg.avif" width={237} height={158} alt="coder"/>
 
         <p className={styles.description}>
           Read My Featured Posts!
