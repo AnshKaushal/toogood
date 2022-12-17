@@ -26,7 +26,7 @@ const Posts = (props) => {
           {blogs.map((blogitem) => {
             return (
               <div key={blogitem.slug} className={styles.grid}>
-                <Image className={styles.postImg} src="/bg.jpg" alt="Anshh"/>
+                <Image className={styles.postImg} src="/bg.jpg" alt="Anshh" width={40} height={40} />
                 <p className={styles.imgPara}>BlogItBruh<br /> <a href="https://instagram.com/anshhkaushal" target={"_blank"} rel="noopener noreferrer">@AnshKaushal</a></p>
                 <Link href={`/blogpost/${blogitem.slug}`}>
                   <h3 className={styles.blogItemh3}>{blogitem.title}</h3>

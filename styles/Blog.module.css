@@ -88,10 +88,10 @@
 }
 
 .imgPara {
-    margin-top: 4px;
-    margin-left: 70px;
+    margin-top: -44px;
+    margin-left: 60px;
 }
 
 .imgPara a:hover {
-    color: red;
+    color: blue;
 }

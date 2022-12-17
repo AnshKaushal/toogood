@@ -1,15 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/api/getblog": "pages/api/getblog.js",
-  "/api/postcontact": "pages/api/postcontact.js",
-  "/compose": "pages/compose.js",
-  "/contact": "pages/contact.js",
-  "/": "pages/index.js",
-  "/thankyou": "pages/thankyou.js",
-  "/api/postcompose": "pages/api/postcompose.js",
-  "/api/blogs": "pages/api/blogs.js",
-  "/posts": "pages/posts.js",
   "/_document": "pages/_document.js",
-  "/blogpost/[slug]": "pages/blogpost/[slug].js"
+  "/posts": "pages/posts.js"
 }
