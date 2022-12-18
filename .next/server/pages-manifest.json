@@ -2,10 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/blogpost/[slug]": "pages/blogpost/[slug].js",
-  "/api/getblog": "pages/api/getblog.js",
-  "/": "pages/index.js",
-  "/posts": "pages/posts.js",
-  "/contact": "pages/contact.js",
-  "/api/blogs": "pages/api/blogs.js"
+  "/posts": "pages/posts.js"
 }

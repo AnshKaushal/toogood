@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
+import * as fs from "fs";
 import styles from "../../styles/BlogPost.module.css";
 
 const Slug = (props) => {
@@ -44,14 +45,24 @@ const Slug = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
-    const { slug } = context.query;
+export async function getStaticPaths(){
+  return {
+    paths: [
+      { params : {slug : 'why-i-started-blogging'}},
+      { params : {slug : 'basics-of-programming'}},
+      { params : {slug : 'first-post'}},
+      { params : {slug : 'what-i-learned-and-understood'}},
+    ],
+    fallback : true
+    }
+  }
 
-    let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`);
-    let myBlog = await data.json();
-    return {
-      props: { myBlog }, // will be passed to the page component as props
-    };
+export async function getStaticProps(context) { 
+  const { slug } = context.params;
+  let myBlog = await fs.promises.readFile(`./blogdata/${slug}.json`,'utf-8')
+  return {
+    props: { myBlog: JSON.parse(myBlog) },
+  }
 }
 
 export default Slug;
