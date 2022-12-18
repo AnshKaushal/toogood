@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import * as fs from "fs";
 import Link from "next/link";
 import styles from "../styles/Blog.module.css";
 
@@ -25,7 +24,7 @@ const Posts = (props) => {
           {blogs.map((blogitem) => {
             return (
               <div key={blogitem.slug} className={styles.grid}>
-                <img className={styles.postImg} src="/bg.jpg" alt="Anshh" width={40} height={40} />
+                <img className={styles.postImg} src="./bg.jpg" alt="Anshh" width={40} height={40} />
                 <p className={styles.imgPara}>BlogItBruh<br /> <a href="https://instagram.com/anshhkaushal" target={"_blank"} rel="noopener noreferrer">@AnshKaushal</a></p>
                 <Link href={`/blogpost/${blogitem.slug}`}>
                   <h3 className={styles.blogItemh3}>{blogitem.title}</h3>
@@ -52,18 +51,13 @@ const Posts = (props) => {
   );
 };
 
-export async function getStaticProps(context) {
-  let data = await fs.promises.readdir("blogdata");
-  let myfile;
-  let allBlogs = [];
-  for (let index = 0; index < data.length; index++) {
-    const item = data[index];
-    myfile = await fs.promises.readFile("./blogdata/" + item, "utf-8");
-    allBlogs.push(JSON.parse(myfile));
-  }
-  return {
-    props: { allBlogs },
-  };
+export async function getServerSideProps(context) { 
+  let data = await fetch('http://localhost:3000/api/blogs')
+  let allBlogs = await data.json()
+
+return {
+  props: {allBlogs}, // will be passed to the page component as props
+}
 }
 
 export default Posts;

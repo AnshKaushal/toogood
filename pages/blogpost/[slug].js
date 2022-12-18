@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import * as fs from 'fs';
 import Head from "next/head";
 import styles from "../../styles/BlogPost.module.css";
 
 const Slug = (props) => {
-  function createMarkup(c){
-    return {__html : c} 
+  function createMarkup(c) {
+    return { __html: c };
   }
 
   const [blog, setBlog] = useState(props.myBlog);
@@ -22,8 +21,13 @@ const Slug = (props) => {
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.heading}>{blog && blog.title}</h1>
-          <hr />
-          {blog && <div className={styles.blogPara} dangerouslySetInnerHTML = {createMarkup(blog.content)}></div>}
+          <br />
+          {blog && (
+            <div
+              className={styles.blogPara}
+              dangerouslySetInnerHTML={createMarkup(blog.content)}
+            ></div>
+          )}
         </main>
       </div>
       <footer className={styles.footer}>
@@ -32,7 +36,7 @@ const Slug = (props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Made By Ansh Kaushal&#8482; <br/> 
+          Made By Ansh Kaushal&#8482; <br />
           &#169; Anshhh 2022
         </a>
       </footer>
@@ -40,24 +44,14 @@ const Slug = (props) => {
   );
 };
 
-export async function getStaticPaths(){
-  return {
-    paths: [
-      { params : {slug : 'why-i-started-blogging'}},
-      { params : {slug : 'basics-of-programming'}},
-      { params : {slug : 'first-post'}},
-      { params : {slug : 'what-i-learned-and-understood'}},
-    ],
-    fallback : true
-    }
-  }
+export async function getServerSideProps(context) {
+    const { slug } = context.query;
 
-export async function getStaticProps(context) { 
-  const { slug } = context.params;
-  let myBlog = await fs.promises.readFile(`./blogdata/${slug}.json`,'utf-8')
-  return {
-    props: { myBlog: JSON.parse(myBlog) },
-  }
+    let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`);
+    let myBlog = await data.json();
+    return {
+      props: { myBlog }, // will be passed to the page component as props
+    };
 }
 
 export default Slug;
