@@ -35,20 +35,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/blogpost/[slug].js"
     ],
-    "/contact": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/contact.js"
-    ],
     "/posts": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/posts.js"
-    ],
-    "/thankyou": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/thankyou.js"
     ]
   },
   "ampFirstPages": []

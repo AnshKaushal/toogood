@@ -3,9 +3,18 @@ import Head from "next/head";
 import * as fs from "fs";
 import Link from "next/link";
 import styles from "../styles/Blog.module.css";
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Posts = (props) => {
   const [blogs, setBlogs] = useState(props.allBlogs);
+  const [count, setCount] = useState(2);
+
+  const fetchData = async () => {
+    let d = await fetch('http://localhost:3000/api/blogs/?count=$(count + 2)')
+    setCount(count + 2)
+    let data = await d.json()
+    setBlogs(data)
+  };
 
   return (
     <div>
@@ -20,13 +29,24 @@ const Posts = (props) => {
         </Head>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>Latest Posts</h1>
+        <h1 className={styles.title}>Latest Posts</h1>
+        <InfiniteScroll
+        dataLength={blogs.length} //This is important field to render the next data
+        next={fetchData}
+        hasMore={props.allCount !== blogs.length}
+        endMessage={
+          <p style={{ textAlign: 'center' }}>
+            <b>Yay! You have seen it all</b>
+          </p>
+        }
+      >
+          
 
           {blogs.map((blogitem) => {
             return (
               <div key={blogitem.slug} className={styles.grid}>
                 <img className={styles.postImg} src="./bg.jpg" alt="Anshh" width={40} height={40} />
-                <p className={styles.imgPara}>BlogItBruh<br /> <a href="https://instagram.com/anshhkaushal" target={"_blank"} rel="noopener noreferrer">@AnshKaushal</a></p>
+                <p className={styles.imgPara}>BlogItBruh<br /> <Link href="https://instagram.com/anshhkaushal" target={"_blank"}>@AnshKaushal</Link></p>
                 <Link href={`/blogpost/${blogitem.slug}`}>
                   <h3 className={styles.blogItemh3}>{blogitem.title}</h3>
                 </Link>
@@ -36,6 +56,7 @@ const Posts = (props) => {
               </div>
             );
           })}
+          </InfiniteScroll>
         </main>
       </div>
       <footer className={styles.footer}>
