@@ -22,7 +22,7 @@ const handlesubmit = () => {
         <meta name="description" content="My Personal Developer Blog." />
         <link
           rel="icon"
-          href="https://anshkaushal.github.io/images/favicon.png"
+          href="https://anshkaushal.github.io/images/pic01.jpg"
         />
       </Head>
       <h1 className={styles.heading}>Contact Me</h1>

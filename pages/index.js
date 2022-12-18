@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Ansh's Blog</title>
         <meta name="description" content="My Personal Developer Blog." />
-        <link rel="icon" href="https://anshkaushal.github.io/images/favicon.png" />
+        <link rel="icon" href="https://anshkaushal.github.io/images/pic01.jpg" />
       </Head>
 
       <main className={styles.main}>
