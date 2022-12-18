@@ -2,8 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/posts": "pages/posts.js",
   "/blogpost/[slug]": "pages/blogpost/[slug].js",
-  "/": "pages/index.js",
-  "/api/blogs": "pages/api/blogs.js"
+  "/compose": "pages/compose.js"
 }
