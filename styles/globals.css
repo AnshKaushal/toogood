@@ -16,3 +16,9 @@ a {
   color: white;
   overflow: auto;
 }
+
+code {
+  background-color: white;
+  color: black;
+  margin: 2%;
+}
