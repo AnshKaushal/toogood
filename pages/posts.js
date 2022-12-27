@@ -20,6 +20,8 @@ const Posts = (props) => {
     <div>
       <div className={styles.container}>
         <Head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4998065714287401"
+     crossorigin="anonymous"></script>
           <title>Posts - Ansh's Blog</title>
           <meta name="description" content="My Personal Developer Blog." />
           <link

@@ -7,6 +7,8 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Ansh's Blog</title>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4998065714287401"
+     crossorigin="anonymous"></script>
         <meta name="description" content="My Personal Developer Blog." />
         <link rel="icon" href="https://anshkaushal.github.io/images/pic01.jpg" />
       </Head>
