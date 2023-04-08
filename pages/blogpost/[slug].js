@@ -12,8 +12,6 @@ const Slug = (props) => {
   return (
     <div>
       <Head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4998065714287401"
-     crossorigin="anonymous"></script>
         <title>{blog && blog.title} - Ansh's blog</title>
         <meta name="description" content="My Personal Developer Blog." />
         <link
