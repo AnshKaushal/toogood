@@ -39,7 +39,7 @@ const Compose = () => {
         <meta name="description" content="My Personal Developer Blog." />
         <link
           rel="icon"
-          href="https://anshkaushal.github.io/images/pic01.jpg"
+          href="https://anshkaushal.codes/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-bg-3000.ddf4cdb5.jpg&w=1080&q=75"
         />
       </Head>
       <h1 className={styles.heading}>New Post</h1>
